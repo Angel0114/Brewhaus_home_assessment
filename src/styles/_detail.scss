@@ -1,0 +1,146 @@
+.detail {
+  padding: 30px 0;
+  min-height: 100vh;
+
+  &__light {
+    background-color: $lightModebg;
+    .detail-title {
+      color: $ligthModeColor;
+    }
+    .detail-container {
+      background-color: $lightModebg2;
+      color: $ligthModeColor;
+      .detail-item {
+        .btn-back {
+          color: $ligthModeColor;
+          border: 1px solid $lightModeBorderColor;
+
+          &:hover {
+            background-color: $lightModebg;
+          }
+        }
+      }
+    }
+  }
+
+  &-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: var(--yellow-2);
+    text-transform: uppercase;
+  }
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    margin: 0px 10px;
+    @include md("md") {
+      margin: 0px 100px;
+    }
+  }
+  &-img {
+    padding: 20px 40px;
+    width: 200px;
+    max-width: 100%;
+    transition: transform 0.2s;
+
+    &:hover {
+      cursor: pointer;
+    }
+    &__content {
+      max-width: 100%;
+    }
+    @include md("md") {
+      max-width: 37%;
+    }
+
+    @include md("sd") {
+      width: 27%;
+      margin-bottom: initial;
+    }
+  }
+
+  &-content {
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @include md("md") {
+      width: 60%;
+      padding: 10px 40px;
+    }
+    @include md("sd") {
+      width: 70%;
+      margin-bottom: initial;
+    }
+
+    &:last-child {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  &-item {
+    &__title {
+      color: var(--yellow-2);
+      font-size: 20px;
+      margin-bottom: 10px;
+      @include md("md") {
+        font-size: 25px;
+      }
+    }
+    &__text {
+      font-size: 15px;
+      margin-bottom: 20px;
+      @include md("md") {
+        font-size: 20px;
+      }
+    }
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    &__title {
+      color: var(--yellow-2);
+      font-size: 16px;
+      margin-bottom: 5px;
+      padding: 5px;
+      @include md("md") {
+        font-size: 20px;
+      }
+    }
+    &__content {
+      font-size: 14px;
+      margin-bottom: 5px;
+      @include md("md") {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .btn-back {
+    height: initial;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 20px;
+    float: right;
+    background-color: transparent;
+    border: 1px solid var(--yellow);
+    color: var(--yellow);
+    cursor: pointer;
+    @include md("md") {
+      width: 200px;
+    }
+    &:hover {
+      color: var(--yellow-2);
+      transition: all 250ms linear;
+    }
+  }
+}
